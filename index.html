@@ -3,22 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>百分比寬度示範</title>
-  
+  <title>百分比寬度示範 | CSS 視覺化練習</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #212529;
+      --primary: #4dabf7;
+      --secondary: #ff922b;
+      --tertiary: #51cf66;
+      --border-radius: 8px;
+    }
 
-  
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1 {
+      font-weight: 700;
+      color: #343a40;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .description {
+      text-align: center;
+      color: #6c757d;
+      margin-bottom: 40px;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: #e9ecef;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    /* 示範區域樣式 */
+    .demo-area {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      width: 100%;
+    }
+
+    .box {
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: var(--border-radius);
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      border: 2px dashed rgba(0,0,0,0.1);
+    }
+
+    .parent {
+      width: 80%;
+      background-color: rgba(77, 171, 247, 0.15);
+      border-color: var(--primary);
+      color: #1971c2;
+    }
+
+    .child {
+      width: 50%;
+      background-color: rgba(255, 146, 43, 0.15);
+      border-color: var(--secondary);
+      color: #d9480f;
+    }
+
+    .grandchild {
+      width: 50%;
+      background-color: rgba(81, 207, 102, 0.15);
+      border-color: var(--tertiary);
+      color: #2b8a3e;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #adb5bd;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-  <h1>百分比寬度看父元素</h1>
-  <p>每一層的 50%，都以自己的父元素內容寬度為基準。</p>
+  <div class="container">
+    <h1>百分比寬度示範</h1>
+    <p class="description">
+      在 CSS 中，<code>width: %</code> 是相對於其<strong>直接父元素</strong>的內容寬度。
+    </p>
 
-  <div class="parent">
-    父元素：頁面的 80%
-    <div class="child">
-      子元素：父元素的 51%
-      <div class="grandchild">
-        孫元素：子元素的 50%
+    <div class="demo-area">
+      <div class="parent box">
+        <span class="label">.parent { width: 80%; }</span>
+        父元素：佔頁面的 80%
+        
+        <div class="child box">
+          <span class="label">.child { width: 50%; }</span>
+          子元素：佔父元素的 50%
+          
+          <div class="grandchild box">
+            <span class="label">.grandchild { width: 50%; }</span>
+            孫元素：佔子元素的 50%
+          </div>
+        </div>
       </div>
+      <p class="hint">* 虛線邊框代表容器範圍，實際寬度會隨視窗縮放。</p>
     </div>
   </div>
 </body>
