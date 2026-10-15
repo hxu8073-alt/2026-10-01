@@ -82,7 +82,7 @@ body {
   margin-top: 0;
 }
 
-.with-badge {
+.notice-card {
   position: relative;
 }
 
@@ -95,4 +95,7 @@ body {
   background: #e76f51;
   color: white;
   font-weight: bold;
+  box-shadow: 0 4px 10px rgba(231, 111, 81, 0.35);
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
 }
