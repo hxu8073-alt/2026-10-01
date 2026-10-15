@@ -1,7 +1,63 @@
-<header class="site-header">
-  <h1>城市散步</h1>
-  <nav>
-    <a href="#event">活動資訊</a>
-    <a href="#signup">立即報名</a>
-  </nav>
-</header>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notice Card Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <h1 class="challenge-title">
+      挑戰！如何炮製新的 <span>.notice-card</span>
+    </h1>
+
+    <div class="challenge-layout">
+      <section class="code-panel" aria-label="範例程式碼">
+        <div class="panel-topbar">
+          <div class="window-dots" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="file-name">index.html</span>
+        </div>
+
+        <pre><code>&lt;aside class="notice-card"&gt;
+  &lt;span class="notice-badge"&gt;提醒&lt;/span&gt;
+  &lt;h2&gt;集合提醒&lt;/h2&gt;
+  &lt;p&gt;請提前 10 分鐘抵達，並自備飲水。&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+      </section>
+
+      <aside class="spec-panel" aria-label="設計規格">
+        <div class="spec-row">
+          <span class="spec-key">尺寸</span>
+          <span class="spec-value">width: 84%; max-width: 760px;</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">盒模型</span>
+          <span class="spec-value">padding: 28px; border: 3px solid #1f5d78;</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">外觀</span>
+          <span class="spec-value">border-radius: 16px; background: #f8f8f8;</span>
+        </div>
+        <div class="spec-row highlight">
+          <span class="spec-key">定位</span>
+          <span class="spec-value">position: relative; top: -16px; right: 24px;</span>
+        </div>
+
+        <p class="rule-note">
+          限制：不可修改 <code>.event-card</code> / 請立刻新建 <code>.notice-card</code> 與 <code>.notice-badge</code>。
+        </p>
+      </aside>
+    </div>
+
+    <div class="page-footer">
+      <span>第 5 頁 | 提示作業</span>
+      <span class="page-number">17</span>
+    </div>
+  </div>
+</body>
+</html>
