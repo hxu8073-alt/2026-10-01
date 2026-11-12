@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 16px 8%;
+  text-align: center;
+  background: #17324d;
+  color: white;
+}
+
+.site-header h1 { margin: 0 0 8px; }
+.site-header a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 300px;
+  padding: 64px 8%;
+  background: #1f5d78;
+  color: white;
+}
+
+.hero h2 {
+  margin: 10px 0 16px;
+  font-size: 46px;
+}
+
+.hero p {
+  max-width: 620px;
+  line-height: 1.8;
+}
+
+.event-card {
+  width: 84%;
+  max-width: 760px;
+  margin: 44px auto;
+  padding: 30px;
+  border: 3px solid #1f5d78;
+  border-radius: 18px;
+  background: white;
+}
+
+.event-card h2 {
+  margin-top: 0;
+}
+
+.with-badge {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e76f51;
+  color: white;
+  font-weight: bold;
+}
+
+.notice-card {
+  width: 84%;
+  max-width: 760px;
+  margin: 44px auto;
+  padding: 28px;
+  border: 3px solid #1f5d78;
+  border-radius: 18px;
+  background: white;
+}
+
+.notice-card h2 {
+  margin-top: 0;
+}
+
+.notice-card {
+  position: relative;
+}
+
+.notice-badge {
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e76f51;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(231, 111, 81, 0.35);
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
