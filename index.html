@@ -3,34 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript 練習</title>
+  <title>模擬刷卡表單</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <main class="app">
+  <main class="payment-card">
+    <p class="eyebrow">W12 基本表單</p>
+    <h1>模擬刷卡</h1>
+    <p class="notice">僅供教學，不輸入真實卡片資料。</p>
 
-  <p class="eyebrow">任務 3</p>
-  <h1>終極密碼</h1>
+    <form id="payment-form" class="payment-form" novalidate>
 
-  <p>目前可猜範圍</p>
-  <div id="range" class="range">1 ～ 100</div>
+      <div class="field">
+        <label for="card-number">測試卡號</label>
+        <input id="card-number" inputmode="numeric" placeholder="1234 5678 1234 5670">
+        <small class="error"></small>
+      </div>
 
-  <div class="field">
-    <label for="guess">請輸入範圍內的整數</label>
-    <input id="guess" type="number">
-  </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="expiry">有效期限 MM/YY</label>
+          <input id="expiry" placeholder="12/29">
+          <small class="error"></small>
+        </div>
 
-  <div class="button-row">
-    <button id="guess-button">送出答案</button>
-    <button id="reset-button" class="secondary">重新開始</button>
-  </div>
+        <div class="field">
+          <label for="cvv">安全碼</label>
+          <input id="cvv" inputmode="numeric" placeholder="123">
+          <small class="error"></small>
+        </div>
+      </div>
 
-  <p id="message" class="message">請輸入第一個數字</p>
-  <p id="attempts" class="stats">已猜 0 次</p>
+      <div class="field">
+        <label for="amount">付款金額</label>
+        <input id="amount" type="number" placeholder="850">
+        <small class="error"></small>
+      </div>
 
-</main>
+      <button type="submit">模擬付款</button>
+      <p id="result" class="result" aria-live="polite">等待檢查</p>
+
+    </form>
+  </main>
+
 </body>
 </html>
